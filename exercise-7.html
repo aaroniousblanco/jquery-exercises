@@ -7,14 +7,28 @@
     <script>
     /*
     Make a Todo List
-
-    0. Make it so that after entering the task description, in the text field and clicking the "Add Task" button, a new task appears inside the element with the id todo-list.
-    1. the ability to remove tasks (add an x button)
-    2. the ability to check off tasks - strikes them out wo removing (add a checkbox)
-    3. the ability to delete a task
     4. the ability to edit an existing task
 
     */
+    // 0. Make it so that after entering the task description, in the text field and clicking the "Add Task" button, a new task appears inside the element with the id todo-list.
+    $(document).ready(function() {
+      $("#add-button").click(function () {
+        var taskItem = $("#description").val();
+        $("#todo-list").append("<li>" + taskItem + "  <button class='xremove'>remove</button>" + "  <input type='checkbox'>" + "</li>");
+      });
+    // 1. the ability to remove tasks (add an x button)
+      $('#todo-list').on('click', '.xremove', function() {
+        var button = $(this);
+        var li = button.parent();
+        li.remove();
+      });
+    // 2. the ability to check off tasks - strikes them out wo removing (add a checkbox)
+      // $("#todo-list").
+
+
+
+    }); //end of DOM ready
+
     </script>
     <style>
     #wrapper {
@@ -32,7 +46,6 @@
       <input id="description" type="text" name="description">
       <button id="add-button">Add Task</button>
       <ul id="todo-list">
-        <li>Feed the cat</li>
       </ul>
     </div>
   </body>

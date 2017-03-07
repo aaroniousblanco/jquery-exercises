@@ -12,7 +12,6 @@
       // Write code here
       var onOff = true;
       $('#section-header').click(function() { //should only include one ".click" function since it is an "event handler", and if you call it more than once in this example (with an on/off switch), then it will just continue to call the event handling function over and over again and stop toggling the element.
-        console.log(onOff);
         if (onOff === true) {
           $('#section').hide();
           onOff = false;
