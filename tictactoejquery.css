@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+.square {
+  width: 115px;
+  height: 115px;
+  margin: 10px;
+  display: block;
+  float: left;
+  background-color: lightgreen;
+  font-size: 5em;
+  padding: 10px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+#header {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2em;
+  padding: 10px 10px 10px 32%;
+}
+
+.img {
+  width: 100px;
+  margin-left: 25px;
+}
+
+#gameboard {
+  padding: 1% 1% 1% 32%;
+  overflow: auto;
+  text-align: center;
+}
+
+.clear {
+  clear: left;
+} /* this is a clear fix for the game squares */
+
+#winnerdeclaration {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 4em;
+  /*padding: 1% 1% 1% 32%;*/
+  /*float: left;*/
+  text-align: center;
+}
+
+.disableclick {
+  pointer-events: none;
+}
+
+.enableclick {
+  pointer-events: all;
+}
+
+#restartGame {
+  margin-top: 10px;
+  margin-left: -100px;
+}
